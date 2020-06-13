@@ -1,10 +1,13 @@
-type Hun {
+type Movie {
+    id: Int!
     name: String!
     age: Int!
     gender: String!
+    score: Int!
 }
 
 type Query{
-  person: Hun!
+  movies: [Movie]!
+  movie(id: Int!): Movie
 }
 

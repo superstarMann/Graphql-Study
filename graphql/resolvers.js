@@ -1,12 +1,9 @@
-const Hun = {
-    name: "Seung Hun",
-    age: 22,
-    gender: "male"
-};
+import{ getMovies, getById }  from "./db";
 
 const resolvers = {
     Query: {
-      person:()=> Hun
+      movies:() => getMovies(),
+      movie: (_,{ id }) => getById(id)
       }
     };
 
